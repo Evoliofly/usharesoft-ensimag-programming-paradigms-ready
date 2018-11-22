@@ -1,6 +1,4 @@
 #!/usr/bin/env python3
 import json
-j=open('beer_list.json')
-B=json.load(j)
 s='Tx_Alcool'
-print(max((b for b in B if b[s]),key=lambda b:b[s])['Nom'])
+print(max((b for b in json.load(open('beer_list.json')) if b[s]),key=lambda b:b[s])['Nom'])
